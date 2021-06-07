@@ -1,0 +1,82 @@
+2021 Jun 06:
+∙	Packaging and uploading to GitHub.
+2020 Oct 12:
+∙	Reconsolidation with earlier versions resolved any oversights and losses.
+2016 Jun 06:
+∙	The local copy of arss.c was accidentally accidentally nuked on this date.
+	This is what was archived on 2016 Jan 20, but there may have been changes by 2016 Mar 10.
+	However, the original was flawed anyways: the RandomNum() routine needed to be repaired.
+	That change was made.
+2015 Dec 13: Version 0.3.2
+∙	Added dB scales.
+2015 Nov 11: Version 0.3.1
+∙	Colored the graphs and regularized the options.
+2015 Aug 06: Version 0.3
+∙	Collation/consolidation of all previous redos and compilation with my version of the FFT, developed in 2012.
+∙	Dropped the double real-FFTs in the Analysis routine in favor of a single FFT: real -> analytic -> complex -> magnitude.
+∙	Result portable to all hosted platforms with ISO C99 compilers.
+2015 Mar 26: Version 0.2.3.3
+∙	Third complete redo. Internal version. No compilation or testing done.
+	For recoding and removing system/library dependencies.
+2014 Feb 09: Version 0.2.3.2
+∙	Second complete redo. Internal version. No compilation or testing done.
+	For critical review and correction of errors.
+2012 Dec 27: Version 0.2.3.1
+∙	First complete redo. Internal version. No compilation or testing done.
+	Redone layout and code simplification/normalization for analysis, translated to C99.
+2008 Dec 17:
+∙	The original author dropped the project (which is still on SourceForge) and replaced it by Photosounder.
+2008 May 30: Version 0.2.3
+∙	Fixed the logarithmic base system so that it produces the expected results when using a different base than 2
+∙	Implemented linear frequency scaling
+∙	Fixed the volume of noise bands in noise synthesis,
+	although it may not be perfect and may be way off for logarithmical bases other than 2 and linear scaling
+∙	Implemented bounds checking when reading and writing in the lower and upper frequencies
+∙	Fixed the brightness setting input which would only take integer values
+∙	Added a bit more information on the progress display line
+2008 May 09: Version 0.2.2
+∙	Replaced frequency domain windowing by a logarithmic symmetric antiderivative of the Blackman function by a logarithmic Hann function.
+	Reduces the visible time domain ripples (which can mainly be seen on the lower part of spectrograms)
+2008 May: Version 0.2.1
+∙	Fixed a bug in the BMP input function that would shear some images
+2008 May 05: Version 0.2
+∙	Modified the I/O interface
+∙	Added big endian support to the I/O functions
+∙	Code clean-up of the I/O functions
+∙	Fixed a bug in the BMP input that would cause offsets with certain BMP files
+∙	Entirely re-organised the code in a more modular way in order to ease the use of the code as a library
+	and to ease up the implementation of new file format support and eventual GUIs
+∙	Changed the time measuring function so that results are consistent on all platforms
+∙	Implemented fast noise synthesis based on a bank of short filtered noise loops modulated
+	with envelopes interpolated using a new technique I named Blackman square interpolation (look-up table based)
+∙	Implemented a large number of command-line parameters to allow for scripting,
+	front-ends and doing things that couldn't be done before (such as specifying the desired dimensions of a spectrogram)
+∙	Automatic selection of the Analysis mode if the input file ends with .wav
+∙	Implemented brightness correction
+Known bugs:
+∙	Drag and drop on Windows changes the current working directory to C:\windows\system32,
+	so if you use drag and drop you need to type the full path for the output file or find it in system32.
+	A work-around would be to make a simple batch script along the lines of : '"C:\dir\arss.exe" %1'.
+0.2 Development Release 2:
+∙	Fixed the 16-bit WAVE output bug
+∙	Blackman filtering and interpolation for downsizing spectrogram lines
+0.2 Development Release 1:
+∙	Fast frequency domain full logarithmic scale filtering
+∙	Fast FFT-based envelope detection 
+∙	Faster analysis (about 100x faster)
+∙	Nearest neighbour downsampling for downsizing spectrogram lines (will be changed for the final 0.2 release)
+∙	Faster FFT-based sine synthesis method
+∙	Noise synthesis disabled (will be re-implemented for the final 0.2 release)
+∙	Revision of the user interface
+0.1 Release:
+∙	Replaced fixed phase sine generation with random phase sine generation
+∙	Changed the PRNG
+∙	Removed the unused code
+∙	Removed every call of nearbyint() due to compatibility issues
+∙	Split the project into several files and moved the Makefile creation to CMake
+2007 Apr 28 Release:
+∙	Image output changed from 16-bit raw to BMP (as it should have been in the first place)
+∙	Compiled with Mingw instead of Cygwin so compatibility should be improved
+∙	Fixed minor naming mistakes
+2007 Mar 25 Release:
+∙	Initial release

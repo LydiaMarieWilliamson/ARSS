@@ -1,0 +1,48 @@
+The Current Author:
+	Lydia Marie Williamson
+The Previous Author:
+	Darth Ninja
+The Original Author and Copyright:
+│	The Analysis & Resynthesis Sound Spectrograph
+│	Michel Rouzic
+│	Copyright (C) 2005-2008 Michel Rouzic
+│	https://github.com/derselbst/ARSS
+│
+│	This program is free software;
+│	you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation;
+│	either version 2 of the License, or (at your option) any later version.
+│
+│	This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+│	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+│	See the GNU General Public License for more details.
+│
+│	You should have received a copy of the GNU General Public License along with this program;
+│	if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+│
+│	Help:
+│	⋯
+
+	The Help is superseded by the instructions below.
+	A commercial successor to ARSS is, at the time of writing, actively maintained at http://arss.sf.net.
+
+Installation:
+∙	Make modifications to the Makefile to suit your system.
+∙	This is configured for Linux with the GCC compiler.
+∙	Afterwards, to build, run the following command:
+		make && make install
+∙	After installing, run arss --help for more information.
+∙	The arss.conf file contains an initial configuration.
+	The frequency range is set from 27.5 Hertz to 880 Hertz.
+
+Testing:
+∙	To generate output for comparison:
+	―	run "arss SoulL.bmp",
+	―	name the output "SoulL.bmp", and
+	―	choose the default settings for everything else.
+	Then compare the result SoulL.bmp to Soul.bmp - they should match.
+∙	To generate "SoulL.wav" from "SoulL.bmp":
+	―	run "arss SoulL.bmp"
+	―	name the output "SoulL.wav",
+	―	choose "2. Sine synthesis",
+	―	choose the default settings for everything else.
+	The result, "SoulL.wav", should correspond to "Soul.wav" run through a low-pass filter cut off at 880 Hertz.

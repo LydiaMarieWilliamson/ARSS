@@ -1,10 +1,10 @@
 CC=gcc
 CFLAGS=-O -g -std=gnu99
-INSTALLDIR=${HOME}/bin
+#INSTALLDIR=${HOME}/bin
+INSTALLDIR=/usr/local/bin
 X=
 O=.o
 OBJS=arss$O EnBMP$O DeBMP$O EnWAV$O DeWAV$O
-INSTALLDIR=/usr/local/bin
 arss$X: ${OBJS}
 	${CC} ${CFLAGS} ${OBJS} -lm -o arss$X
 arss$0: EnBMP.h DeBMP.h EnWAV.h DeWAV.h

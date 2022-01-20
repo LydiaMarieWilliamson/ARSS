@@ -36,7 +36,7 @@ Installation:
 
 Testing:
 ∙	To generate output for comparison:
-	―	run "arss SoulL.bmp",
+	―	run "arss Soul.wav",
 	―	name the output "SoulL.bmp", and
 	―	choose the default settings for everything else.
 	Then compare the result SoulL.bmp to Soul.bmp - they should match.
